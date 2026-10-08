@@ -11,11 +11,20 @@ Needs Node.js 20+ and a Reactor API key from
 From the repo root:
 
 ```bash
-corepack enable                # once per machine: makes `pnpm` available
+corepack enable
 pnpm install
-cp .env.example .env.local     # then edit .env.local: REACTOR_API_KEY=rk_...
-pnpm dev                       # open http://localhost:3000
+cp .env.example .env.local
 ```
+
+`corepack enable` (once per machine) makes the `pnpm` command available.
+Then open `.env.local` and replace the placeholder with your key
+(`REACTOR_API_KEY=rk_...`), and start the app:
+
+```bash
+pnpm dev
+```
+
+Open http://localhost:3000.
 
 **Images aren't included.** Before the video will play, add the two guide
 sprites at `public/characters/aoi.jpg` and `public/characters/haruto.jpg`.
