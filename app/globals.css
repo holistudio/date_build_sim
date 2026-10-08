@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Dating-sim palette as Tailwind v4 theme tokens:
+ *   ink          → text and dark accents (deep plum, not black)
+ *   blush        → the guide's accent: name plate, primary choices
+ *   blush-deep   → bold dialogue, button shadow
+ *   blush-soft   → accent on dark chips
+ *   blush-mist   → textbox gradient, input fill
+ *   backdrop     → title-screen base behind the video
+ *   panel/frame  → the main_game frame
+ */
+@theme {
+  --font-sans: var(--font-rounded), ui-rounded, system-ui, sans-serif;
+
+  --color-ink: #4a3352;
+  --color-blush: #f47fa6;
+  --color-blush-deep: #d6537f;
+  --color-blush-soft: #ffc2d6;
+  --color-blush-mist: #fff0f5;
+  --color-backdrop: #fde7ef;
+  --color-panel: #f6eef8;
+  --color-frame: #e9cfe0;
+  --color-shadow: rgb(120 60 110 / 0.35);
+}
+
+html,
+body {
+  background:
+    radial-gradient(circle at 15% 0%, #ffe3ee 0, transparent 45%),
+    radial-gradient(circle at 85% 10%, #e8e2ff 0, transparent 45%),
+    #fbf6fb;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+textarea,
+input {
+  font-family: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* Title screen: a soft sky and drifting sakura petals. */
+.bg-backdrop {
+  background:
+    linear-gradient(180deg, #ffe9f1 0%, #fdf2f7 45%, #efe7fb 100%);
+}
+
+.petals span {
+  position: absolute;
+  top: -8%;
+  left: calc(var(--i) * 7.3% + 2%);
+  width: 14px;
+  height: 10px;
+  border-radius: 80% 0 80% 0;
+  background: #ffb7cf;
+  opacity: 0.75;
+  animation: petal-fall calc(9s + var(--i) * 0.7s) linear infinite;
+  animation-delay: calc(var(--i) * -1.3s);
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(40px, 55vh) rotate(180deg);
+  }
+  100% {
+    transform: translate(-20px, 110vh) rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .petals span {
+    animation: none;
+    display: none;
+  }
+}

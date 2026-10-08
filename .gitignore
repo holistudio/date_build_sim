@@ -1,0 +1,36 @@
+# dependencies
+node_modules
+.pnpm-store
+
+# next.js / build output
+.next
+out
+build
+*.tsbuildinfo
+next-env.d.ts
+
+# env files (keep the example)
+.env
+.env*.local
+.env.*
+!.env.example
+
+# images (not redistributed; see docs/DOCUMENTATION.md "Images")
+/public/
+
+# deploy
+.vercel
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# editors / OS
+.DS_Store
+.idea
+.vscode
+*.swp
+
+# local Claude Code settings
+.claude/settings.local.json
