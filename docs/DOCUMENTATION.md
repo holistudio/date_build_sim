@@ -9,12 +9,12 @@ shows each step in a cel-shaded visual-novel style. Scaffolded with
 ## Run it
 
 ```bash
-cp .env.example .env.local
+cp .env.example .env
 pnpm install
 pnpm dev
 ```
 
-Set `REACTOR_API_KEY=rk_...` in `.env.local` before `pnpm dev`, then open
+Set `REACTOR_API_KEY=rk_...` in `.env` before `pnpm dev`, then open
 http://localhost:3000. If `pnpm` isn't found, run `corepack enable` once.
 
 API keys come from [reactor.inc/account/api-keys](https://www.reactor.inc/account/api-keys).

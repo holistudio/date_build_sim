@@ -13,11 +13,11 @@ From the repo root:
 ```bash
 corepack enable
 pnpm install
-cp .env.example .env.local
+cp .env.example .env
 ```
 
 `corepack enable` (once per machine) makes the `pnpm` command available.
-Then open `.env.local` and replace the placeholder with your key
+Then open `.env` and replace the placeholder with your key
 (`REACTOR_API_KEY=rk_...`), and start the app:
 
 ```bash
