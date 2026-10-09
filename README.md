@@ -2,7 +2,7 @@
 
 A PC build tutorial as a visual novel dating sim, with a live world-model video stream. 🎮✨
 
-This is just a silly, quick hackathon project for Reactor x Google: World Models Hackathon 🌍🤖, inspired by Tax Heaven 3000. 🏝️
+This is just a silly, quick hackathon project for Reactor x Google: World Models Hackathon 🌍🤖, inspired by [Tax Heaven 3000](https://taxheaven3000.com/). 🏝️
 
 ## 🚀 Quickstart
 
